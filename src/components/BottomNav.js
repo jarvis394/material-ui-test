@@ -16,21 +16,13 @@ const styles = {
 }
 
 class BottomNav extends Component {
-  state = { 
-    active: 'home' 
-  }
-
-  handleChange(e, value) {
-    this.setState({ active: value })
-  }
-  
   render() {
     return (
-      <Paper style={ styles.root }>
+      <Paper elevation={ 2 } style={ styles.root }>
         <BottomNavigation 
-          value={ this.state.active } 
+          value={ this.props.active } 
           showLabels={ false } 
-          onChange={ this.handleChange.bind(this) }
+          onChange={ this.props.handleChange }
         >
           <BottomNavigationAction 
             label="Home"
