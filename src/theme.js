@@ -1,4 +1,5 @@
 import blue from '@material-ui/core/colors/blue'
+import pink from '@material-ui/core/colors/pink'
 import { createMuiTheme } from '@material-ui/core/styles'
 
 const theme = createMuiTheme({
@@ -7,12 +8,12 @@ const theme = createMuiTheme({
       main: blue.A400,
     },
     secondary: {
-      main: '#19857b',
+      main: pink.A400,
     },
     background: {
       default: '#fff',
     },
-  },
+  }
 });
 
 export default theme
