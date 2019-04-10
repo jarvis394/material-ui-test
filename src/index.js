@@ -7,9 +7,10 @@ import { ThemeProvider } from '@material-ui/styles'
 import theme from './theme'
 
 ReactDOM.render(
-  <ThemeProvider theme={ theme }>
+  <App />
+  /*<ThemeProvider theme={ theme }>
     <CssBaseline />
     <App />
-  </ThemeProvider>,
+  </ThemeProvider>*/,
   document.getElementById('root')
 )

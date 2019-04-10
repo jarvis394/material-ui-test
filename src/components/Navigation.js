@@ -5,18 +5,19 @@ import RestoreIcon from '@material-ui/icons/Restore';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import LocationIcon from '@material-ui/icons/LocationOn';
 
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
+
+const styles = {
+  stickToBottom: {
+    width: '100%',
+    position: 'fixed',
+    bottom: 0
+  }
+}
 
 export default class Navigation extends Component {
   render() {
-    const [ value, setValue ] = React.useState('restore')
-    const styles = {
-      stickToBottom: {
-        width: '100%',
-        position: 'fixed',
-        bottom: 0
-      }
-    }
+    const [ value, setValue ] = useState('restore')
 
     function handleChange(event, newValue) {
       setValue(newValue)
@@ -46,6 +47,10 @@ export default class Navigation extends Component {
             value="location" 
             icon={ <LocationIcon /> } 
             />
+        </BottomNavigation>
+        
+        <BottomNavigation>
+          <BottomNavigationA
         </BottomNavigation>
         
       </div>
