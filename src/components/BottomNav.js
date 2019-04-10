@@ -10,7 +10,6 @@ import LocationIcon from '@material-ui/icons/LocationOn'
 
 import React, { Component } from 'react'
 
-
 const styles = {
   root: {
     width: '100%',
@@ -24,8 +23,12 @@ const styles = {
     }*/
 
 class BottomNav extends Component {
- state = {
-    active: 'restore'
+  constructor(props) {
+    super(props)
+    
+    this.state = {
+      active: 'restore'
+    }
   }
 
   handleChange(e, value) {
@@ -36,12 +39,12 @@ class BottomNav extends Component {
     return (
       <Paper className="Navigation" style={ styles.root }>
         <BottomNavigation 
-          value={ this.active } 
+          value={ this.state.active } 
           showLabels={ false } 
           onChange={ this.handleChange }
         >
           <BottomNavigationAction 
-            label={"Restore" }
+            label="Restore"
             value="restore" 
             icon={ <RestoreIcon /> } 
           />
