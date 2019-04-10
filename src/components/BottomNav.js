@@ -1,5 +1,6 @@
-import { BottomNavigation } from '@material-ui/core/BottomNavigation'
-import { BottomNavigationAction } from '@material-ui/core/BottomNavigationAction'
+import BottomNavigation from '@material-ui/core/BottomNavigation'
+import BottomNavigationAction from '@material-ui/core/BottomNavigationAction'
+import Icon from '@material-ui/core/Icon'
 
 //import { makeStyles } from '@material-ui/core/styles'
 
@@ -8,7 +9,6 @@ import FavoriteIcon from '@material-ui/icons/Favorite'
 import LocationIcon from '@material-ui/icons/LocationOn'
 */
 
-import Icon from '@material-ui/core/Icon'
 import React, { Component } from 'react'
 
 /* const styles = makeStyles({
@@ -26,21 +26,21 @@ class BottomNav extends Component {
 
     function handleChange(event, newValue) {
       setValue(newValue)
-    }*/
+    }
     
     return (
       <div className="Navigation">
         
         <BottomNavigation 
-          //value={ value } 
-         // className={ classes.root }
+          value={ value } 
+          className={ classes.root }
           showLabels={ true } 
-         // onChange={ handleChange }
+          onChange={ handleChange }
         >
           <BottomNavigationAction 
             label={"Restore" }
            // value="restore" 
-            icon={ <Icon>home</Icon> } 
+            icon={ <Icon>restore</Icon> } 
           />
           { /*<BottomNavigationAction 
             label="Favorite" 
