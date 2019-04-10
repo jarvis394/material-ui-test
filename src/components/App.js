@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 import '../styles/App.css'
 
-import Button from '@material-ui/core/Button'
-import Grid from '@material-ui/core/Grid';
-import TextField from '@material-ui/core/TextField';
+//import Container from '@material-ui/core/Container'
+import Typography from '@material-ui/core/Typography'
 
 import BottomNav from './BottomNav'
 
@@ -12,23 +11,14 @@ class App extends Component {
     return (
       <div className="App">
         
-        <Grid container alignItems="center" spacing={8}>
-          <Grid item>Hi world</Grid>
-          <Grid item xs>
-            <TextField
-              InputProps={{
-                disableUnderline: true,
-              }}
-              fullWidth
-              placeholder={'Search by email address, phone number, or user UID'}
-            />
-          </Grid>
-        </Grid>
+      
+          <Typography variant="h3" color="textSecondary" align="center">Validate JSON</Typography>
+        
         
         <BottomNav />
         
       </div>
-    );
+    )
   }
 }
 
