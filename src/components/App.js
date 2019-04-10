@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import '../styles/App.css'
 
-import { Navigation } from './Navigation'
+import { Btn } from './Button'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Navigation />
+        <Btn />
       </div>
     )
   }
