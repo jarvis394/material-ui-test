@@ -11,9 +11,7 @@ class App extends Component {
     return (
       <div className="App">
         
-      
-          <Typography variant="h3" color="textSecondary" align="center">Validate JSON</Typography>
-        
+  
         
         <BottomNav />
         

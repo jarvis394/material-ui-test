@@ -2,9 +2,8 @@ import BottomNavigation from '@material-ui/core/BottomNavigation'
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction'
 import Paper from '@material-ui/core/Paper'
 
-import RestoreIcon from '@material-ui/icons/Restore'
-import FavoriteIcon from '@material-ui/icons/Favorite'
-import LocationIcon from '@material-ui/icons/LocationOn'
+import HomeIcon from '@material-ui/icons/Home'
+import SettingsIcon from '@material-ui/icons/Settings'
 
 import React, { Component } from 'react'
 
@@ -18,7 +17,7 @@ const styles = {
 
 class BottomNav extends Component {
   state = { 
-    active: 'restore' 
+    active: 'home' 
   }
 
   handleChange(e, value) {
@@ -34,20 +33,15 @@ class BottomNav extends Component {
           onChange={ this.handleChange.bind(this) }
         >
           <BottomNavigationAction 
-            label="Restore"
-            value="restore" 
-            icon={ <RestoreIcon /> } 
+            label="Home"
+            value="home" 
+            icon={ <HomeIcon /> } 
           />
           <BottomNavigationAction 
-            label="Favorite" 
-            value="favorite" 
-            icon={ <FavoriteIcon /> } 
+            label="Settings" 
+            value="settings" 
+            icon={ <SettingsIcon /> } 
           />
-          <BottomNavigationAction 
-            label="Location" 
-            value="location" 
-            icon={ <LocationIcon /> } 
-          /> 
         </BottomNavigation>
       </Paper>
     )
