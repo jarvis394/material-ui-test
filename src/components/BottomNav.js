@@ -14,7 +14,6 @@ function handleChange(event, newValue) {
 }
 
 class BottomNav extends Component {
-  state = { value: "restore" }
   render() {
     return (
       <div className="BottomNav">
