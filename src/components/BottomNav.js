@@ -18,10 +18,6 @@ const styles = {
   }
 }
 
-    /*function handleChange(event, newValue) {
-      setValue(newValue)
-    }*/
-
 class BottomNav extends Component {
   constructor(props) {
     super(props)
@@ -29,9 +25,12 @@ class BottomNav extends Component {
     this.state = {
       active: 'restore'
     }
+    this.handleChange = this.handleChange.bind(this)
   }
+  
+  state = { active: 'restore' }
 
-  handleChange(e, value) {
+  handleClick(e, value) {
     this.setState({ active: value })
   }
   
@@ -41,7 +40,7 @@ class BottomNav extends Component {
         <BottomNavigation 
           value={ this.state.active } 
           showLabels={ false } 
-          onChange={ this.handleChange }
+          onChange={ this.handleClick.bind( }
         >
           <BottomNavigationAction 
             label="Restore"
