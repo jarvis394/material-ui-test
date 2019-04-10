@@ -12,9 +12,9 @@ export default class Navigation extends Component {
     const [ value, setValue ] = React.useState('restore')
     const styles = {
       stickToBottom: {
-       /* width: '100%',
+        width: '100%',
         position: 'fixed',
-        top: 0*/
+        bottom: 0
       }
     }
 
@@ -25,10 +25,27 @@ export default class Navigation extends Component {
     return (
       <div className="Navigation">
         
-        <BottomNavigation /* value={ value } className={ styles.stickToBottom } showLabels={ true } onChange={ handleChange }*/>
-          <BottomNavigationAction label="Restore" value="restore" icon={ <RestoreIcon /> } />
-          <BottomNavigationAction label="Favorite" value="favorite" icon={ <FavoriteIcon /> } />
-          <BottomNavigationAction label="Location" value="location" icon={ <LocationIcon /> } />
+        <BottomNavigation 
+          value={ value } 
+          className={ styles.stickToBottom } 
+          showLabels={ true } 
+          onChange={ handleChange }
+          >
+          <BottomNavigationAction 
+            label="Restore" 
+            value="restore" 
+            icon={ <RestoreIcon /> } 
+            />
+          <BottomNavigationAction 
+            label="Favorite" 
+            value="favorite" 
+            icon={ <FavoriteIcon /> } 
+            />
+          <BottomNavigationAction 
+            label="Location" 
+            value="location" 
+            icon={ <LocationIcon /> } 
+            />
         </BottomNavigation>
         
       </div>
