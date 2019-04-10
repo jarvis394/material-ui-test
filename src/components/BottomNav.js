@@ -1,6 +1,5 @@
 import BottomNavigation from '@material-ui/core/BottomNavigation'
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction'
-import Icon from '@material-ui/core/Icon'
 import Paper from '@material-ui/core/Paper'
 
 // import makeStyles from '@material-ui/core/styles'
@@ -28,19 +27,13 @@ const styles = {
 
 class BottomNav extends Component {
   render() {
-    // const classes = styles()
-    
-    
     return (
-      <div className="Navigation">
-        
+      <Paper className="Navigation" style={ styles.root }>
         <BottomNavigation 
           value={ "restore" } 
-          style={ styles.root }
           showLabels={ false } 
           // onChange={ handleChange }
         >
-          <Paper>
           <BottomNavigationAction 
             label={"Restore" }
             value="restore" 
@@ -56,9 +49,8 @@ class BottomNav extends Component {
             value="location" 
             icon={ <LocationIcon /> } 
           /> 
-          </Paper>
         </BottomNavigation>
-      </div>
+      </Paper>
     )
   }
 }
