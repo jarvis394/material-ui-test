@@ -19,20 +19,26 @@ const styles = {
   }
 }
 
-//const [ value, setValue ] = React.useState('restore')
-
     /*function handleChange(event, newValue) {
       setValue(newValue)
     }*/
 
 class BottomNav extends Component {
+ state = {
+    active: 'restore'
+  }
+
+  handleChange(e, value) {
+    this.setState({ active: value })
+  }
+  
   render() {
     return (
       <Paper className="Navigation" style={ styles.root }>
         <BottomNavigation 
-          value={ "restore" } 
+          value={ this.active } 
           showLabels={ false } 
-          // onChange={ handleChange }
+          onChange={ this.handleChange }
         >
           <BottomNavigationAction 
             label={"Restore" }
