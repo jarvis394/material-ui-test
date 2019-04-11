@@ -1,15 +1,19 @@
+// React
 import React, { Component } from 'react'
 import { Switch, Route } from 'react-router-dom'
 
+// Styles
 import '../styles/App.css'
 
+// Pages
 import Home from '../pages/Home'
 import Settings from '../pages/Settings'
 
+// Components
 import BottomNav from './BottomNav'
-import TopNav from './TopNav'
 
-import { Hidden, Fade } from '@material-ui/core'
+// MUI Components
+import { Hidden } from '@material-ui/core'
 
 class App extends Component {
   state = {
@@ -23,10 +27,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Hidden mdDown>
-          <TopNav active={ this.state.active } handleChange={ this.handleChange.bind(this) } />
-        </Hidden>
-        
         <Switch>
           <Route exact path="/" render={ () => <Home handleChange={ this.handleChange.bind(this) } /> } />
           <Route exact path="/settings" render={ () => <Settings handleChange={ this.handleChange.bind(this) } /> } />
