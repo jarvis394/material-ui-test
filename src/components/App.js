@@ -9,7 +9,7 @@ import Settings from '../pages/Settings'
 import BottomNav from './BottomNav'
 import TopNav from './TopNav'
 
-import Hidden from '@material-ui/core/Hidden'
+import { Hidden, Fade } from '@material-ui/core'
 
 class App extends Component {
   state = {
@@ -28,8 +28,8 @@ class App extends Component {
         </Hidden>
         
         <Switch>
-          <Route exact path="/" component={ Home } />
-          <Route exact path="/settings" component={ Settings } />
+          <Route exact path="/" render={ () => <Home handleChange={ this.handleChange.bind(this) } /> } />
+          <Route exact path="/settings" render={ () => <Settings handleChange={ this.handleChange.bind(this) } /> } />
         </Switch>
 
         <Hidden lgUp>
